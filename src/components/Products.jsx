@@ -1,13 +1,13 @@
 import React from 'react';
+import { useContext } from 'react';
+import { cartContext } from '../context/CartContext';
 import health1 from '../assets/rm900.png';
 import health2 from '../assets/rm112.png';
 import health3 from '../assets/rm450.png';
 
-export default function Products({onAddToCart}) {
-    const addToCart = (name, price) => {
-        alert(`${name} (price: $${price}) added to the cart!`);
-        onAddToCart(name,price); 
-      };
+export default function Products() {
+    const { addToCart } = useContext(cartContext);
+
     return (
     <>
         <div id="package-sec">

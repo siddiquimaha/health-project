@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import cartIcon from '../assets/iconcartjpeg.jpeg';
 // import burgerIcon from '../assets/linesIcon.png';
+import { cartContext } from '../context/CartContext';
 
-export default function Header({cartItems}) {
+export default function Header() {
+  const { cart } = useContext(cartContext);
+  // const totalItems = cartItems.length;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isNavMenu, setNavMenu] = useState(false);
 
@@ -14,8 +17,8 @@ export default function Header({cartItems}) {
   }
   let openCart = () => setIsModalOpen(true);
   let closeCart = () => setIsModalOpen(false); 
-console.log(cartItems);
-  let totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
+console.log(cart);
+  let totalPrice = cart.reduce((total, item) => total + item.price, 0);
   return (
     <>
 
@@ -38,7 +41,7 @@ console.log(cartItems);
             </ul>
             <div id="cart-section" className="icon-container" onClick={openCart}>
                 <img src={cartIcon} alt="" height="40px"/>
-                <span id="cartbadge" className="cart-badge">{cartItems.length}</span>
+                <span id="cartbadge" className="cart-badge">{cart.length}</span>
             </div>
             <button className='hamburger-menu' onClick={toggleMenu}>&#9776;</button>
             {/* <div className='hamburger-menu' onClick={toggleMenu}>&#9776;
@@ -65,10 +68,10 @@ console.log(cartItems);
             <span className="close-btn" onClick={closeCart}>&times;</span>
             <h2>Your Cart</h2>
             <div id="cart-items">
-              {cartItems.length === 0 ? (
+              {cart.length === 0 ? (
                 <p>Your cart is empty.</p>
               ) : (
-                cartItems.map((item, index) => (
+                cart.map((item, index) => (
                   <p key={index}>{item.name} - ${item.price}</p> 
                 ))
               )}

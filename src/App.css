@@ -636,9 +636,11 @@ form p {
 }
 /* css for about us */
 .about-us{
+  margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to bottom, rgba(162, 194, 216, 0.3), hsla(0, 0%, 100%, 0.5));
 }
 .about-text{
   width: 50%;
@@ -737,19 +739,7 @@ form p {
     /* margin-left: 5px; */
     width: 100%;
   }
-  /* .text-div p{
-    font-size: 15px;
-    line-height: 1.2rem;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 1rem;
-    text-align: justify;
-  }
-  .text-div{
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 100%;
-  } */
+
   .text-div p{
     font-size: 13px;
     padding: 0.8rem;

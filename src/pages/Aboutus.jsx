@@ -1,9 +1,14 @@
 import React from 'react';
 import cycleImage from '../assets/Cycle.png';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+
 
 export default function Aboutus() {
   return (
     <>
+    <Header cart={[]}/>
     <div className='about-us'>
       <div className='about-text'>
         <p>The De Simone Formulation is a probiotic medical food containing living bacteria. It is the driving force behind Visbiome®, which aids in the dietary management of microbial imbalance associated with IBS, ulcerative colitis, pouchitis, and hepatic encephalopathy.</p>
@@ -14,6 +19,7 @@ export default function Aboutus() {
         <img src={cycleImage} alt="" />
       </div>
     </div>
+    <Footer/>
     </>
 
   );

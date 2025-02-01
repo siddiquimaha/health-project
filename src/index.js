@@ -6,29 +6,24 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Aboutus from './pages/Aboutus';
 import Productlist from './pages/Productlist';
+import { CartProvider } from './context/CartContext';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let allRoutes = createBrowserRouter(
   [
-    {
-      path:'/',
-      element:<App/>
-    },
-    {
-      path:'about-us',
-      element:<Aboutus/>
-    },
-    {
-      path:'add-products',
-      element:<Productlist/>
-    }
+    {path:'/', element:<App/>},
+    {path:'about-us', element:<Aboutus/>},
+    {path:'add-products', element:<Productlist/>}
   ]
-)
+);
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={allRoutes}>
-    </RouterProvider>
+    <CartProvider>
+      <RouterProvider router={allRoutes}>
+      </RouterProvider>
+    </CartProvider>
     {/* <App /> */}
   </React.StrictMode>
 );
