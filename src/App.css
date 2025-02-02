@@ -175,7 +175,6 @@ body, html{
   min-height: 600px;
   /* background: linear-gradient(to bottom, rgba(162, 194, 216, 0.3), hsla(0, 0%, 100%, 0.5)); */
   background-color: #faf9f4;
-
 }
 .speak-div{
   margin-left: 130px;
@@ -229,7 +228,6 @@ body, html{
 }
 .imgDiv{
   /* background-color: white; */
-  background-color: blueviolet;
   height: 500px;
   width: 350px;
   align-items: center;
@@ -240,39 +238,29 @@ body, html{
  
 }
 .imgDiv img{
-  /* background-color: white; */
-  background-color: rgb(179, 110, 110);
+  background-color: white;
   border-radius: 60%;
   margin-top: 3%;
   height: 490px;
   width: 350px;
 }
 .counter-Div{
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
   max-width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-right: 45px;
-  /* margin-left: 45px; */
   color: #007acc;
   font-weight: bold;
   margin-top: 9%;
-  background-color: #cc005f;
   padding: 1rem;
 }
 .counter-Div Div{
-  /* height: 96px;
-  width: 94px; */
-  height: auto;
+  height: 96px;
+  /* width: 94px; */
   width: 100%;
   border-style: dashed;
   border-radius: 0.5rem;
   margin-top: 20px;
-  /* margin-right: 1rem; */
   text-align: center;
-  background-color: aquamarine;
-
 }
 .counter-Div p {
   font-size: 12px;
@@ -967,8 +955,8 @@ form p {
 
   .counter-Div Div{
     width: 80px;
-    /* width: 100% !important; */
-    gap: 5px !important;
+    margin-top: 10px;
+
   }
 }
 @media (max-width: 425px) {
