@@ -228,7 +228,8 @@ body, html{
 
 }
 .imgDiv{
-  background-color: white;
+  /* background-color: white; */
+  background-color: blueviolet;
   height: 500px;
   width: 350px;
   align-items: center;
@@ -239,7 +240,8 @@ body, html{
  
 }
 .imgDiv img{
-  background-color: white;
+  /* background-color: white; */
+  background-color: rgb(179, 110, 110);
   border-radius: 60%;
   margin-top: 3%;
   height: 490px;
@@ -252,18 +254,24 @@ body, html{
   max-width: 100%;
   overflow: hidden;
   margin-right: 45px;
-  margin-left: 45px;
+  /* margin-left: 45px; */
   color: #007acc;
   font-weight: bold;
   margin-top: 9%;
+  background-color: #cc005f;
+  padding: 1rem;
 }
 .counter-Div Div{
-  height: 96px;
-  width: 94px;
+  /* height: 96px;
+  width: 94px; */
+  height: auto;
+  width: 100%;
   border-style: dashed;
   border-radius: 0.5rem;
-  margin-top: 16px;
+  margin-top: 20px;
+  /* margin-right: 1rem; */
   text-align: center;
+  background-color: aquamarine;
 
 }
 .counter-Div p {
