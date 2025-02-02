@@ -1,5 +1,11 @@
 
 /* start for cart pop up */
+body, html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 .modal-content {
   background-color: #fff;
   margin: 15% auto;
@@ -240,6 +246,11 @@
   width: 350px;
 }
 .counter-Div{
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
+  max-width: 100%;
+  overflow: hidden;
   margin-right: 45px;
   margin-left: 45px;
   color: #007acc;
@@ -945,8 +956,11 @@ form p {
   }
 }
 @media (max-width: 425px) {
+
   .counter-Div Div{
     width: 80px;
+    /* width: 100% !important; */
+    gap: 5px !important;
   }
 }
 @media (max-width: 425px) {
