@@ -6,7 +6,7 @@ export default function Productlist() {
     pname: "",
     pprice: "",
     pdescription: "",
-    pimage: "",
+    pimage: null,
   });
 
   const handleChange = (e) => {
@@ -15,24 +15,29 @@ export default function Productlist() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const productData = {
-      name: formData.pname,
-      price: parseFloat(formData.pprice),
-      description: formData.pdescription,
-      image: formData.pimage, // Assuming base64 string
-    };
+  const data = new FormData();
+  data.append("Name", formData.pname);
+  data.append("Price", formData.pprice);
+  data.append("Description", formData.pdescription);
+  data.append("Image", formData.pimage); // correct field for file
 
-    try {
-      const response = await axios.post("http://localhost:5252/api/ProductApi", productData);
-      alert("Product saved successfully!");
-      console.log(response.data);
-    } catch (error) {
-      console.error("Error saving product:", error);
-      alert("Failed to save product.");
-    }
-  };
+  try {
+    const response = await axios.post(
+      "https://localhost:7221/api/HealthApi/add-product",data,{
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    alert("Product added in DB !");
+  } catch (error) {
+    console.error("Error saving product:", error);
+    alert("Failed to save product.");
+  }
+};
+
 
   return (
     <>
@@ -86,12 +91,15 @@ export default function Productlist() {
                 id="image"
                 name="pimage"
                 accept="image/*"
-                onChange={(e) =>
-                  setFormData((prev) => ({
-                    ...prev,
-                    pimage: URL.createObjectURL(e.target.files[0]),
-                  }))
-                }
+                onChange={(e) => {
+                 const file = e.target.files[0];
+                 if (file) {
+                   setFormData((prev) => ({
+                     ...prev,
+                     pimage: file,
+                   }));
+                 }
+                }}
                 required
               />
               <button type="submit">Save</button>

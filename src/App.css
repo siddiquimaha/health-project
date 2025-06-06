@@ -104,21 +104,26 @@ body, html{
 
 .cart-badge {
   position: absolute;
-  top: 0;
+  top: 15px;
   right: 0;
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  border-radius: 50%;
-  padding: 3px 6px;
+  left: 18px;
+  /* background-color: rgb(13, 168, 13); */
+  color: red;
+  font-size: 15px;
+  /* border-radius: 50%; */
+  /* padding: 3px 6px; */
 }
 #cart-section{
-  background-color: #cc005f;
+  background-color: #00cc00;
   display: flex;
   position: relative;
   cursor: pointer;
   align-items: center;
   margin-right: 80px;
+}
+#cart-section img{
+  width: 100%;
+  height: 45px;
 }
 /* Hamburger menu initially hidden */
 .hamburger-menu {
@@ -131,10 +136,11 @@ body, html{
 }
 /* CSS for tittle section  */
 #title-section{
-  margin-top: 60px;
+  margin-top: 70px;
   width: 100%;
-  min-height: 500px;
+  /* min-height: 500px; */
   background: linear-gradient(to bottom, rgba(162, 194, 216, 0.3), hsla(0, 0%, 100%, 0.5));
+
 
 }
 .formula-div{
@@ -142,6 +148,7 @@ body, html{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 .formula-text{
   width: 50%;
@@ -231,7 +238,7 @@ body, html{
   height: 500px;
   width: 350px;
   align-items: center;
-  border-radius: 60%;  
+  border-radius: 50%;  
   margin-top: 6%;
   margin-right: 70px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 10.0);
@@ -265,12 +272,12 @@ body, html{
 .counter-Div p {
   font-size: 12px;
   color: #007acc;
-  line-height: 11px;
+  /* line-height: 11px; */
 }
 .counter-Div .p-count{
   font-weight: bolder;
   font-size: 24px;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
 
 /* CSS for work-section */
@@ -360,6 +367,7 @@ body, html{
   margin-left: 20px;
   border-style: dashed;
   border-radius: 1rem;
+  padding-bottom: 0;
 }
 .text-div{
   margin-left: 5px;
@@ -409,6 +417,7 @@ body, html{
   font-size: 3rem;
   white-space: normal;
   line-height: 2.8rem;
+  margin-bottom: 16px;
 
 }
 .oneformula-section p, .containedformula-section p{
@@ -660,6 +669,94 @@ form p {
 .about-img img{
   width: 100%;
 }
+
+/* css for sign up form */
+.signup-form{
+  gap: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.signup-box {
+  background-color: white;
+  padding: 10px;
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-box h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.signup-box label {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+.signup-box input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  margin-left: 0px;
+}
+
+.signup-box small {
+  font-size: 12px;
+  color: #555;
+}
+
+.signup-box button {
+  background-color: #0066c0;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 0px;
+}
+
+.signup-box button:hover {
+  background-color: #0066c0;
+}
+
+.signup-box p {
+  font-size: 12px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.signup-box a {
+  color: #0066c0;
+  text-decoration: none;
+}
+
+.signup-box a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 15px 0;
+}
+/* css end for sign up form */
 @media (max-width: 480px) {
   .formula-div{
     margin-left: 0px;

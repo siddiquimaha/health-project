@@ -28,19 +28,19 @@ console.log(cart);
               <li><a href="#" className="nav-link active">Home</a></li>
               <li><a href="#" className="nav-link">Health</a></li>
               <li><Link to={'about-us'} className="nav-link">About Us</Link></li>
-              <li><a href="#package-sec" className="nav-link">Shop</a></li>
+              <li><Link to={'get-products'} className="nav-link">Shop</Link></li>
             </ul>
             <div className="logo">
                 <span>CDS</span><span className="highlight">22</span><span className="italic">-formula</span>
             </div>
             <ul className={`nav-menu ${isNavMenu ? 'open' : ''} right-menu`}>
-              <li><a href="#" className="nav-link">wish-list</a></li>
+              <li><Link to={'sign-up'} className="nav-link">Hello, Sign Up</Link></li>
               <li><a href="#contact-sec" className="nav-link">Contact Us</a></li>
-              <li><Link to={'add-products'} className='nav-link'>Products</Link></li>
+              <li><Link to={'add-products'} className='nav-link'>Add Product</Link></li>
               <li className="toggleclose-btn" onClick={toggleMenu}>&times;</li>
             </ul>
             <div id="cart-section" className="icon-container" onClick={openCart}>
-                <img src={cartIcon} alt="" height="40px"/>
+                <img src={cartIcon}/>
                 <span id="cartbadge" className="cart-badge">{cart.length}</span>
             </div>
             <button className='hamburger-menu' onClick={toggleMenu}>&#9776;</button>

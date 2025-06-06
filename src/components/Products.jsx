@@ -2,8 +2,9 @@ import React from 'react';
 import { useContext } from 'react';
 import { cartContext } from '../context/CartContext';
 import health1 from '../assets/rm900.png';
-import health2 from '../assets/rm112.png';
+// import health2 from '../assets/rm112.png';
 import health3 from '../assets/rm450.png';
+import health4 from '../assets/menbodywash.jpeg'
 
 export default function Products() {
     const { addToCart } = useContext(cartContext);
@@ -23,8 +24,8 @@ export default function Products() {
                     <p style={{textAlign: "center"}}>price : $900</p>
                     <button className="shop-now"  onClick={() => addToCart('CDS22-900 billion sachets', 900)}>SHOP NOW</button>
                 </div>
-                <div className="img-mid"><img src={health2} alt=""/>
-                    <h2>CDS22-<i>formula</i> <br/> <span>112 billion sachets</span> </h2>
+                <div className="img-mid"><img src={health4} alt=""/>
+                    <h2>beauty-<i>product</i> <br/> <span>Liquid body wash</span> </h2>
                     <p style={{textAlign: "center"}}>Strong and convenient</p>
                     <p style={{textAlign: "center"}}>Potency, 112 billion live bacteria per sachet</p>
                     <p style={{textAlign: "center"}}>price : $1500</p>
